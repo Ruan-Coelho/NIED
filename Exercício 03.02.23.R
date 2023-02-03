@@ -126,7 +126,6 @@ tabyl(pnad_19, rede) %>% adorn_rounding(3)
 tabyl(pnad_19, sexo) %>% adorn_rounding(3)
 
 ## 1. UF ----------------------------------------------------------------------
-
 # Proporção de rede por UF
 prop_UF <- pnad_19 %>%
   # removendo NAs em UF e rede
@@ -146,7 +145,6 @@ prop_UF <- pnad_19 %>%
   adorn_rounding(3) %>%
   # Tirando qualquer agrupamento do objeto
   ungroup()
-
 
 # EXTRA: Proporção e n por UF
 propn_UF <- pnad_19 %>%
@@ -169,7 +167,6 @@ propn_UF <- pnad_19 %>%
   # Tirando qualquer agrupamento do objeto
   ungroup()
 
-
 # CURIOSIDADE: usando o pacote pollster para fazer tabela com pesos amostrais
 # Veja como essa função torna mais direto o processo todo
 pnad_19 %>%
@@ -179,7 +176,6 @@ pnad_19 %>%
   crosstab(UF, rede, weight = V1032, n = FALSE) %>% 
   # Ajustando para ser proporção (0-1), e não porcentagem (0-100)
   mutate(across(c(Privada, Publica), ~ . / 100))
-
 
 # CURIOSIDADE: Criando uma tabela bonita de proporção e n por UF (pacote gt)
 propn_UF %>%
@@ -228,9 +224,7 @@ propn_UF %>%
   )
 
 
-
 ## 2. Proporção de alunos por capital -----------------------------------------
-
 # Proporção de rede por capital
 prop_Cap <- pnad_19 %>%
   # removendo NAs em Capital e rede
@@ -250,7 +244,6 @@ prop_Cap <- pnad_19 %>%
   adorn_rounding(3) %>%
   # Tirando qualquer agrupamento do objeto
   ungroup()
-
 
 # EXTRA: Proporção e n por capital
 propn_Cap <- pnad_19 %>%
@@ -282,7 +275,6 @@ pnad_19 %>%
   crosstab(Capital, rede, weight = V1032, n = FALSE) %>% 
   # Ajustando para ser proporção (0-1), e não porcentagem (0-100)
   mutate(across(c(Privada, Publica), ~ . / 100))
-
 
 # CURIOSIDADE: Criando uma tabela bonita de proporção e n de cada capital (gt)
 propn_Cap %>%
