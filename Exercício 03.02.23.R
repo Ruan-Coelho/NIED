@@ -181,7 +181,7 @@ pnad_19 %>%
   mutate(across(c(Privada, Publica), ~ . / 100))
 
 
-# CURIOSIDADE: Criando uma tabela bonita de proporção e n por UF
+# CURIOSIDADE: Criando uma tabela bonita de proporção e n por UF (pacote gt)
 propn_UF %>%
   mutate(n_Publica = round(n_Publica),
          n_Privada = round(n_Privada)) %>%
@@ -284,7 +284,7 @@ pnad_19 %>%
   mutate(across(c(Privada, Publica), ~ . / 100))
 
 
-# CURIOSIDADE: Criando uma tabela bonita de proporção e n de cada capital
+# CURIOSIDADE: Criando uma tabela bonita de proporção e n de cada capital (gt)
 propn_Cap %>%
   gt() %>%
   # Dando título
