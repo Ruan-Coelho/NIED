@@ -48,7 +48,6 @@ pnad_19 <- pnad_19  %>%
          # lembrando de transformar em factor
          rede = factor(rede))
 
-
 # Exercício 1 -----------------------------------------------------------------
 # O objeto capital_pivot, acredito que se refere ao do exercício anterior:
 # Proporção de alunos em escola pública e privada por capital
@@ -143,7 +142,6 @@ pais %>%
 # A variável V3014 nos indica se a pessoa concluiu ou não:
 # "Concluiu este curso que frequentou anteriormente"
 
-
 # Vendo a var de "último curso que frequentou"
 pais %>% 
   count(V3009A)
@@ -236,7 +234,6 @@ pais_e_filhos <- full_join(pais, filhos)
 # acredito que o inverso acaba sendo melhor, devido ao número menor de 
 # categorias em pais. Também não é especificado onde deve ser a proporção. 
 # Fiz todas as 3 possibilidades e usei o peso.
-
 
 # Gerando tabela: total das colunas (pais)
 pais_e_filhos %>% 
