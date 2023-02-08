@@ -102,7 +102,6 @@ filhos <- pnad_19 %>%
 # 02	- Cônjuge ou companheiro(a) de sexo diferente
 # 03	- Cônjuge ou companheiro(a) do mesmo sexo
 
-
 # Criando uma base só com os pais
 pais <- pnad_19 %>% 
   filter(V2005 %in% 1:3)
@@ -230,9 +229,9 @@ pais_e_filhos <- full_join(pais, filhos)
 
 # Exercício 7 -----------------------------------------------------------------
 # Suspeito que esteja sendo pedido para calcular proporções como feito no
-# exercício anterior. É pedido colunas de escolaridade de escolaridade, mas 
-# acredito que o inverso acaba sendo melhor, devido ao número menor de 
-# categorias em pais. Também não é especificado onde deve ser a proporção. 
+# exercício da aula passada. É pedido colunas de escolaridade, mas acredito que
+# o inverso acaba sendo melhor, devido ao número menor de categorias em pais.
+# Também não é especificado onde deve ser a proporção: coluna, linha ou tudo.
 # Fiz todas as 3 possibilidades e usei o peso.
 
 # Gerando tabela: total das colunas (pais)
