@@ -11,7 +11,7 @@ options(scipen = 999)
 pacman::p_load(tidyverse, janitor, rio, PNADcIBGE, gt, pollster)
 
 # Diretório de trabalho
-setwd("C:/Users/Homedesk/OneDrive/PC-RX/PPGSA/Doutorado/NIED")
+setwd("")
 
 # Importando usando o pacote do IBGE (offline)
 pnad_19 <- read_pnadc("PNADC_2019_visita1.txt",
